@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proactive AI Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AI-powered productivity companion</p>
+          <h1>Plan smarter, act earlier, and protect every deadline.</h1>
+          <p class="hero-text">
+            Proactive AI helps you turn intentions into action by ranking tasks,
+            building a smart plan, and nudging you before commitments slip.
+          </p>
+        </div>
+        <div class="hero-card">
+          <h2>Today’s focus</h2>
+          <p id="focusSummary">Loading your next best move…</p>
+          <button id="voiceButton" class="secondary-btn">🎤 Add task by voice</button>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel planner-panel">
+          <div class="panel-header">
+            <h2>Task planner</h2>
+            <p>Capture commitments and let AI help you decide what to do first.</p>
+          </div>
+
+          <form id="taskForm" class="task-form">
+            <input id="taskTitle" type="text" placeholder="What needs attention?" required />
+            <input id="taskDate" type="date" required />
+            <select id="taskPriority">
+              <option value="High">High priority</option>
+              <option value="Medium" selected>Medium priority</option>
+              <option value="Low">Low priority</option>
+            </select>
+            <select id="taskCategory">
+              <option value="Study">Study</option>
+              <option value="Work">Work</option>
+              <option value="Health">Health</option>
+              <option value="Personal">Personal</option>
+            </select>
+            <button type="submit">Add task</button>
+          </form>
+
+          <div id="taskList" class="task-list"></div>
+        </section>
+
+        <section class="panel side-panel">
+          <div class="insight-card">
+            <div class="panel-header">
+              <h2>AI recommendations</h2>
+              <p>Suggested action based on urgency and effort.</p>
+            </div>
+            <div id="recommendations" class="recommendations"></div>
+          </div>
+
+          <div class="insight-card">
+            <div class="panel-header">
+              <h2>Habit tracker</h2>
+              <p>Small habits create momentum before deadlines become urgent.</p>
+            </div>
+            <div id="habitList" class="habit-list"></div>
+            <form id="habitForm" class="habit-form">
+              <input id="habitName" type="text" placeholder="New habit" required />
+              <button type="submit">Add habit</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
